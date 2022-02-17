@@ -1,8 +1,6 @@
  window.addEventListener('DOMContentLoaded',function(){
-
-
-
- const newList = document.querySelector('#newList')
+ 
+  const newList = document.querySelector('#newList');
  /*let input = document.querySelector('#to-do') */
  const toDoForm = document.querySelector('form');
  
@@ -13,7 +11,7 @@
      newLi.isCompleted = savedTodos[i].isCompleted ? true : false
      if(newLi.isCompleted) {
 
-        newLi.style.textDecoration = 'line-through'
+        newLi.style.textDecoration = 'line-through';
      }
 
        newList.appendChild(newLi);
@@ -24,7 +22,10 @@
      e.preventDefault();
     
      let btn = document.createElement("button");
-     btn.innerText = "X";
+     //btn.innerText = "X";
+     btn.className = "fa-solid fa-square-x";
+     btn.id = "remove-button"
+     
       
       let newLi = document.createElement('li');
       newLi.innerText = document.querySelector('#to-do').value;
@@ -37,11 +38,7 @@
       savedTodos.push({ task: newLi.innerText, isCompleted: false });
       localStorage.setItem("todos", JSON.stringify(savedTodos));
 
-
-
-
-
- });
+});
    
 
 
@@ -49,12 +46,17 @@
 newList.addEventListener('click', function(e) {
       let clickedListItem = e.target; 
      /*if(e.target.tagName === 'LI'){
-        e.target.style.textDecoration = "line-through";
+        e.target.style.textDecoration = "line-through"; 
+        */
     
     
-    }else if(e.target.tagName === 'BUTTON'){
-       e.target.parentNode.remove()
-      }   */
+      if(clickedListItem.tagName === 'BUTTON'){
+       clickedListItem.parentNode.remove()
+       
+      
+      
+      }
+      
        
       if (!clickedListItem.isCompleted) {
         clickedListItem.style.textDecoration = "line-through";

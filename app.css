@@ -35,6 +35,21 @@ text-decoration: black 3em
 #newList {
 font-size: xx-large;
 
+
+}
+
+#remove-button{
+position: absolute;
+content: icon "fa-solid fa-square-x";
+height: 25px;
+width: 25px;
+margin-left: 10px;
+
+
+}
+
+#remove-button:hover {
+   background-color: brown;
 }
 
 
