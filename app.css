@@ -1,15 +1,17 @@
 body{
-    background-color: lightslategrey;
+    background-color: beige;
+    position: relative;
 }
 
 h2 {
    font-family: 'Oswald', sans-serif;
-   font-size: 100px;
-   height: 200px;
-   text-decoration: underline;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+    font-size: 100px;
+    height: 200px;
+    text-decoration: underline;
+    background: antiquewhite;
+    position: relative;
+    margin: auto;
+    text-align: center;
 
 }
 
@@ -17,40 +19,82 @@ form {
    display: flex;
    align-items: center;
    justify-content: center;
+   margin-top: 20px;
+
+}
+
+#listContainer{
+   align-items: center;
+}
+
+#newList {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   
 
 }
 
 #to-do{
 display: block;    
-width: 50%;
-border-color: black;    
+width: 25%;
+height: 25px;
+border-color: black; 
+border-radius: 5px;
+border: none;   
 font-size: large;
 font-family: Arial, Helvetica, sans-serif;
 background-color: wheat;
-text-decoration: black 3em
+text-decoration: black 3em;
+padding: 2px;
  
+}
+
+#submit-button{
+   margin-left: 10px;
+   height: 25px;
+   border-radius: 5px;
+   border: none;
+   border-color: black;
+   background: cadetblue;
 }
 
 
 #newList {
-font-size: xx-large;
-
-
-}
-
-#remove-button{
-position: absolute;
-content: icon "fa-solid fa-square-x";
-height: 25px;
-width: 25px;
-margin-left: 10px;
-
+font-size: x-large;
+list-style-type: none;
+margin-left: 30%;
 
 }
 
-#remove-button:hover {
-   background-color: brown;
+.new-todo{
+   margin: 5px;
+   background: wheat;
+   width: 45%;
+   border-radius: 5px;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;;
 }
+
+.remove-button{
+margin-right: 10px;
+background: indianred;
+    border: none;
+    border-radius: 5px
+
+}
+
+.check-button {
+   margin-left: -10px;
+   margin-right: 5px;
+   border: none;
+    background: springgreen;
+    border-radius: 5px;
+}
+
+
+
 
 
 
