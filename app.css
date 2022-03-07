@@ -77,12 +77,19 @@ margin-left: 30%;
    justify-content: flex-start;;
 }
 
+
+i[class='fa-solid fa-trash'], i[class='fa-solid fa-square-check'] {
+   pointer-events: none;
+}
+
+
+
 .remove-button{
 margin-right: 10px;
 background: indianred;
     border: none;
-    border-radius: 5px
-
+    border-radius: 5px;
+    
 }
 
 .check-button {
@@ -91,7 +98,10 @@ background: indianred;
    border: none;
     background: springgreen;
     border-radius: 5px;
-}
+};
+
+
+
 
 
 
