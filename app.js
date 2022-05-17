@@ -13,6 +13,8 @@
     
     const checkBtn = document.createElement('button')
     const submitTodo = document.querySelector('#to-do')
+    const liContainer = document.createElement('div')
+    liContainer.className = 'li-container'
     
     checkBtn.innerHTML = '<i class="fa-solid fa-square-check"></i>'
     checkBtn.className = 'check-button'
@@ -25,18 +27,20 @@
      
       const newLi = document.createElement('li');
       newLi.className = 'new-todo'
+      newLi.innerText = submitTodo.value
       
-      const newSpan = document.createElement('span')
-      newSpan.className = 'span'
-      newSpan.innerText = submitTodo.value;
+      //const newSpan = document.createElement('span')
+      //newSpan.className = 'span'
+      //newSpan.innerText = submitTodo.value;
       
       // add todo to local storage 
       saveLocalTodos(submitTodo.value);
       
-      newLi.appendChild(newSpan);
-      newList.appendChild(newLi);
-      newLi.prepend(checkBtn);
-      newLi.prepend(trashBtn);
+      //liContainer.appendChild(newSpan);
+      liContainer.prepend(checkBtn);
+      liContainer.prepend(trashBtn);
+      liContainer.append(newLi)
+      newList.append(liContainer)
       toDoForm.reset();
       
 
@@ -81,6 +85,9 @@ newList.addEventListener('click', function(e) {
               todos.forEach(function(todo){
                 const checkBtn = document.createElement('button')
                 const submitTodo = document.querySelector('#to-do')
+                const liContainer = document.createElement('div')
+                liContainer.className = 'li-container'
+                
     
                 checkBtn.innerHTML = '<i class="fa-solid fa-square-check"></i>'
                 checkBtn.className = 'check-button'
@@ -93,16 +100,18 @@ newList.addEventListener('click', function(e) {
      
                  const newLi = document.createElement('li');
                  newLi.className = 'new-todo'
+                 newLi.innerText = submitTodo.value
+
       
-                 const newSpan = document.createElement('span')
-                 newSpan.className = 'span'
-                 newSpan.innerText = todo;
+                 //const newSpan = document.createElement('span')
+                 //newSpan.className = 'span'
+                 //newSpan.innerText = todo;
       
        
-                  newLi.appendChild(newSpan);
-                  newList.appendChild(newLi);
-                  newLi.prepend(checkBtn);
-                  newLi.prepend(trashBtn);
+                 liContainer.prepend(checkBtn);
+                 liContainer.prepend(trashBtn);
+                 liContainer.append(newLi)
+                 newList.append(liContainer)
 
 
               });
